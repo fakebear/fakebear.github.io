@@ -120,11 +120,24 @@ xxxxxxxx.xyz:8080 {
 ### Caddyfile针对php的变化 ###
 
 ```json
-php_fastcgi unix//run/php/php7.4-fpm.sock
-# 这个配置会把上面v2ray的配置也转走，必须指定路径/
-# try_files {path} {path}/ /index.php?{query}
-handle_path / {
-	try_files {path} {path}/index.php?{query} index.php?{query}
+{
+	https_port 8080
+}
+xxxxxxxx.xyz:8080 {
+	tls your@email.com
+	root * /var/www/html
+	file_server
+	encode gzip
+	php_fastcgi unix//run/php/php7.4-fpm.sock
+	# 如果用这个配置的话会把v2ray的也转走
+	# try_files {path} {path}/ /index.php?{query}
+	# 必须指定php只工作于"/"
+	handle_path / {
+		try_files {path} {path}/index.php?{query} index.php?{query}
+	}
+	handle_path /happyhour {
+		reverse_proxy 127.0.0.1:38240
+	}
 }
 ```
 写一个简单php试试
