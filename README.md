@@ -23,31 +23,41 @@ build系统时会提示默认root密码，别忘了记录。
 
 但我们平时访问，肯定不能一直用root，所以建议加个新用户，并加入sodu组方便操作。
 
-`adduser ryan
-usermod -aG sudo ryan`
+```console
+adduser username
+usermod -aG sudo username
+```
+
 
 该升级的升级，并把必须的软件装一装
 
-`apt-get update
+```console
+apt-get update
 apt-get upgrade
-apt-get install vim curl ufw`
+apt-get install vim curl ufw
+```
 
 防火墙配一配
 
-`ufw default deny
+```console
+ufw default deny
 ufw allow 22
 ufw enable
 ufw status verbose
-`
+```
 
 时区设置一下，免得后面看log搞不清啥时候的log
 
-`timedatectl set-timezone Asia/Shanghai`
+```console
+timedatectl set-timezone Asia/Shanghai
+```
 
 ## <span id="sec4">基本的翻墙梯（233一键脚本搭建v2ray + caddy）</span> ##
 使用233blog提供的一键脚本
 
-``bash <(curl -s -L https://git.io/v2ray.sh``
+```console
+bash <(curl -s -L https://git.io/v2ray.sh
+```
 
 就可以搭建出最基本梯子，建议选择 `4 - Websocket+TLS`这样才不浪费咱们后续搭起来的wordpress，而且目前来看这个组合模式的安全性还是比较高的。
 
@@ -55,7 +65,7 @@ ufw status verbose
 
 此时，生成的Caddyfile应该如下：
 
-```
+```json
 	xxxxxxxx.xyz:8080 {
 		reverse_proxy https://liyafly.com {
 		header_up Host {upstream_hostport}
@@ -75,7 +85,8 @@ caddy最值得称道的地方就是它可以自动配置证书，让https的支�
 
 下面是关键，修改caddyfile如下：
 
-```
+
+```json
 {
 	# 告诉caddy，8080端口是我们https端口
 	https_port 8080
@@ -97,6 +108,7 @@ handle_path /happyhour {
 	reverse_proxy 127.0.0.1:38240
 }
 ```
+
 这时访问`https://xxxx.xyz:8080`就可以看到你html里写的hello world！了
 
 ## <span id="sec6">安装PHP并在caddy中增加支持</span> ##
