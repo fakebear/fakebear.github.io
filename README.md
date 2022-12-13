@@ -1,6 +1,6 @@
-# 如何搭建自己的v2ray + Caddy + PHP + https + MySQL + Wordpress + PHPMyAdmin
+# 如何搭建自己的v2ray + Caddy + PHP + https + MySQL + Wordpress
 ## 目录 ##
-- [如何搭建自己的v2ray + Caddy + PHP + https + MySQL + Wordpress + PHPMyAdmin](#如何搭建自己的v2ray--caddy--php--https--mysql--wordpress--phpmyadmin)
+- [如何搭建自己的v2ray + Caddy + PHP + https + MySQL + Wordpress](#如何搭建自己的v2ray--caddy--php--https--mysql--wordpress)
 	- [目录](#目录)
 	- [VPS的申请](#vps的申请)
 	- [域名的申请](#域名的申请)
