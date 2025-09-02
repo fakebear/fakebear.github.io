@@ -1,10 +1,10 @@
 {
   "files": {
-    "main.css": "/fakebear.github.io/static/css/main.f855e6bc.css",
-    "main.js": "/fakebear.github.io/static/js/main.bdc96008.js",
-    "index.html": "/fakebear.github.io/index.html",
-    "main.f855e6bc.css.map": "/fakebear.github.io/static/css/main.f855e6bc.css.map",
-    "main.bdc96008.js.map": "/fakebear.github.io/static/js/main.bdc96008.js.map"
+    "main.css": "/static/css/main.f855e6bc.css",
+    "main.js": "/static/js/main.bdc96008.js",
+    "index.html": "/index.html",
+    "main.f855e6bc.css.map": "/static/css/main.f855e6bc.css.map",
+    "main.bdc96008.js.map": "/static/js/main.bdc96008.js.map"
   },
   "entrypoints": [
     "static/css/main.f855e6bc.css",
