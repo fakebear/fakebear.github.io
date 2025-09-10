@@ -1,13 +1,17 @@
 {
   "files": {
     "main.css": "/static/css/main.f855e6bc.css",
-    "main.js": "/static/js/main.cad168c8.js",
+    "main.js": "/static/js/main.f97c5480.js",
+    "static/media/20240101_HowToSetUpVSPServer.md": "/static/media/20240101_HowToSetUpVSPServer.247d065c10461b5c578d.md",
+    "static/media/20250905_LearningReact_Route.md": "/static/media/20250905_LearningReact_Route.afecc1383541d511a3c1.md",
     "index.html": "/index.html",
+    "static/media/20250909001_LearningReact_UILibrary.md": "/static/media/20250909001_LearningReact_UILibrary.feac49b534554661ef9e.md",
+    "static/media/20250909002_LearningReact_Redux.md": "/static/media/20250909002_LearningReact_Redux.4d879cd2643dd08b8b4c.md",
     "main.f855e6bc.css.map": "/static/css/main.f855e6bc.css.map",
-    "main.cad168c8.js.map": "/static/js/main.cad168c8.js.map"
+    "main.f97c5480.js.map": "/static/js/main.f97c5480.js.map"
   },
   "entrypoints": [
     "static/css/main.f855e6bc.css",
-    "static/js/main.cad168c8.js"
+    "static/js/main.f97c5480.js"
   ]
 }
